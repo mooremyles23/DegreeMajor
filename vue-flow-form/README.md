@@ -3,19 +3,16 @@
 Create conversational conditional-logic forms with Vue.js.
 
 <p>
-  <a href="https://github.com/ditdot-dev/vue-flow-form/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/@ditdot-dev/vue-flow-form.svg?sanitize=true&amp;color=41B883" alt="License" /></a>
-  <a href="https://www.npmjs.com/package/@ditdot-dev/vue-flow-form"><img src="https://img.shields.io/npm/v/@ditdot-dev/vue-flow-form.svg?sanitize=true&amp;color=41B883" alt="Version" /></a>
-  <a href="https://cdnjs.com/libraries/vue-flow-form"><img src="https://img.shields.io/cdnjs/v/vue-flow-form?color=yellow" alt="cdnjs" /></a>
+ 
 </p>
 
 <p align="center">
-  <img src="https://www.ditdot.hr/demo/vff/visuals/v-form-green-full-rotate-02.png" alt="v-form screenshots">
+ 
 </p>
 
 ## Demo
 
 * [Questionnaire example](https://www.ditdot.hr/demo/vff/questionnaire/)
-* [Quiz example](https://www.ditdot.hr/demo/vff/quiz/)
 
 ## Project Documentation
 
@@ -23,64 +20,7 @@ Create conversational conditional-logic forms with Vue.js.
 
 ## Example Project
 
-Requirements:
 
-* [Node.js](https://nodejs.org/en/) version 8.9 or above (8.11.0+ recommended)
-* [npm](https://www.npmjs.com/get-npm) version 3+ (or [yarn](https://yarnpkg.com/lang/en/docs/install/) version 1.16+)
-* [Git](https://git-scm.com/)
-
-After checking the prerequisites, follow these simple steps to install and use Vue Form:
-
-```shell
-# clone the repo
-$ git clone https://github.com/ditdot-dev/vue-flow-form.git myproject
-
-# go into app's directory and install dependencies:
-$ cd myproject
-```
-
-If you use npm:
-
-```shell
-$ npm install
-
-# serve with hot reload at localhost:8080 by default.
-$ npm run serve
-
-# build for production
-$ npm run build
-```
-
-If you use yarn:
-
-```shell
-$ yarn install
-
-# serve with hot reload at localhost:8080 by default.
-$ yarn serve
-
-# build for production
-$ yarn build
-```
-
-Made with [Vue.js](https://vuejs.org/)
-
-## Usage as npm package
-
-If you don't already have an existing Vue project, the easiest way to create one is to use [Vue CLI](https://cli.vuejs.org/):
-
-```shell
-$ npm install -g @vue/cli
-# OR
-$ yarn global add @vue/cli
-```
-
-And then create a project (refer to [Vue CLI documentation](https://cli.vuejs.org/guide/) and [issue tracker](https://github.com/vuejs/vue-cli/issues) for potential problems on Windows):
-
-```shell
-$ vue create my-project
-$ cd my-project
-```
 
 To add Vue Flow Form as a dependency to your Vue project, use the following:
 
