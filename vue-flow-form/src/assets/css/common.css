@@ -1,0 +1,691 @@
+/*!
+    Copyright (c) 2020 - present, DITDOT Ltd. - MIT Licence
+    https://github.com/ditdot-dev/vue-flow-form
+    https://www.ditdot.hr/en
+*/
+
+html {
+  line-height: 1.25;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+@media screen and (max-width:1023px){
+  html {
+    font-size: 15px
+  }
+}
+
+@media screen and (min-width:1366px) {
+  html {
+    font-size: 18px
+  }
+}
+
+@media screen and (min-width:1920px) {
+  html {
+    font-size: 22px
+  }
+}
+
+@media screen and (min-width:2560px) {
+  html {
+    font-size: 26px
+  }
+}
+
+body {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.43;
+  min-height: 260px;
+}
+
+a {
+  cursor: pointer;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+/*utils*/
+.text-thin {
+  font-weight: 300;
+}
+
+.disabled,
+[disabled] {
+  opacity: .4;
+  user-select: none;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+ol.reset-list,
+ul.reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**/
+.f-container {
+  padding: 0 8vw;
+  width: 100%;
+  margin-top: 2vh;
+  margin-bottom: 4vh;
+}
+
+/*header*/
+header {
+  padding: 1rem 10vw;
+  z-index: 1400;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
+}
+
+header .f-container {
+  margin: 0;
+  line-height: 0;
+}
+
+img.logo,
+svg.logo {
+  height: 18px;
+  max-width: 240px;
+  opacity: 1;
+}
+
+/**/
+.v-form button,
+.v-form input {
+  -webkit-appearance: none;
+  overflow: visible;
+}
+
+/*buttons*/
+
+/*default button*/
+.v-form button {
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  padding: .6rem 1.4rem;
+  text-align: center;
+  display: inline-block;
+  min-height: 44px;
+  white-space: pre-wrap;
+  max-width: 100%;
+} 
+
+.o-btn-action {
+  z-index: 1;
+  line-height: 1.2;
+  font-weight: 900;
+  text-transform: lowercase;
+}
+
+.o-btn-action span {
+  font-size: 1rem;
+  user-select: none;
+  text-decoration: none;
+  transition: all 0.4s ease 0s;
+}
+
+.f-enter-desc {
+  display: inline-block;
+  margin-left: 0.6rem;
+  margin-top: 0.6rem;
+}
+
+.f-enter {
+  margin-bottom: 20px;
+}
+
+.f-uppercase {
+  text-transform: uppercase;
+}
+
+/*v-form*/
+.v-form {
+  margin: 26vh 10vw 80px;
+  position: relative;
+  text-align: left;
+}
+
+.v-form .f-container {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.v-form .q-is-active {
+  opacity: 1;
+}
+
+.v-form .q-form.q-is-inactive {
+  display: none;
+}
+
+.v-form .full-width {
+  display: block;
+  width: 100%;
+}
+
+/*form-elements*/
+span.faux-form {
+  border-bottom: 1px solid;
+  display: inline-block;
+  margin-right: .6rem;
+  margin-left: 0;
+  position: relative;
+  white-space: nowrap;
+}
+
+.v-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.32;
+  margin: 0;
+  opacity: 0;
+  outline: 0;
+  padding: 1.03rem 0;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.v-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.v-form input[type=text],
+.v-form input[type=number],
+.v-form input[type=tel],
+.v-form input[type=email],
+.v-form input[type=url],
+.v-form input[type=password],
+.v-form textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid;
+  border-radius: 0;
+  line-height: 1.5;
+  margin: 0 .6rem 0 0;
+  outline: 0;
+  padding: 0.32rem 0.4rem;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.v-form textarea {
+  display: block;
+  outline: none;
+  resize: vertical;
+}
+
+.v-form .full-width input[type=text],
+.v-form .full-width input[type=number],
+.v-form .full-width input[type=tel],
+.v-form .full-width input[type=email],
+.v-form .full-width input[type=url],
+.v-form .full-width input[type=password],
+.v-form .full-width textarea,
+.v-form .full-width span.faux-form{
+  width: 100%;
+  padding-left: .2rem;
+  padding-right: .2rem;
+}
+
+.f-required {
+  display: none; /*hides required asterisks*/
+}
+
+.f-answer.full-width {
+  margin-top: 28px;
+}
+
+span.f-sub + .f-answer.full-width,
+div.field-sectionbreaktype .f-answer {
+  margin-top: 16px
+}
+
+span.f-empty {
+  display: inline-block;
+  min-width: 6rem;
+  padding-right: 28px;
+  font-weight: 300;
+  padding-bottom: 4px;
+}
+
+span.f-answered{
+  font-weight: 900;
+}
+
+.f-arrow-down {
+  display: inline-block;
+  margin-left: .2em;
+  pointer-events: none;
+  width: 18px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  line-height: 1.3;
+}
+
+.f-arrow-down svg {
+  width: 100%;
+  height: auto;
+}
+
+/*typography*/
+li,
+p,
+ul,
+.section-text {
+  font-size: 1.1rem;
+  line-height: 1.34;
+}
+
+h1,
+.fh1 {
+  font-weight: 900;
+  font-size: 3.4rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h2,
+.fh2 {
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 1.34;
+  padding-right: 4rem;
+  margin-bottom: 20px;
+}
+
+h3,
+.fh3 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.fh1,
+.fh2,
+.fh3{
+  display: block;
+}
+
+@media screen and (max-width:767px) {
+  h2,
+  .fh2 {
+    font-size: 2.2rem;
+    padding-right: 0;
+  }
+
+}
+
+@media screen and (max-width:479px), (max-height:400px) {
+  h2,
+  .fh2 {
+    font-size: 1.4rem;
+  }
+
+}
+
+/*misc-typography*/
+span.f-tagline,
+span.f-sub {
+  font-weight: 400;
+  display: block;
+  font-size: 1.222rem;
+}
+
+span.f-tagline,
+span.f-text {
+  margin-bottom: 8px;
+}
+
+span.f-sub {
+  margin-bottom: 8px;
+  margin-top: 6px;
+}
+
+span.f-sub span:not(.f-uppercase) {
+  margin-right: .4rem;
+}
+
+span.f-sub span.f-help{
+  display: block;
+}
+
+span.f-sub span + span.f-help {
+  margin-top: 0;
+}
+
+span.f-text {
+  margin-right: .6rem;
+}
+
+p.description {
+  margin-top: 0;
+  padding-right: 4rem;
+}
+
+/*f-radios (multiple-choice)*/
+ul.f-radios {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  max-width: 590px;
+  min-width: 160px;
+}
+
+ul.f-radios li {
+  padding: .5rem .6rem .5rem;
+  margin: .5rem 0 .6rem;
+  font-weight: 300;
+  line-height: 1.2;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+}
+
+ul.f-radios li.f-other input[type=text] {
+  border-bottom: none;
+  width: 100%;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.f-radios-desc {
+  display: block;
+}
+
+.f-radios-desc,
+ul.f-radios li,
+ul.f-radios li input[type=text] {
+  font-size: 0.94rem;
+}
+
+ul.f-radios li span.f-label {
+  margin-left: 1rem;
+  display: block;
+}
+
+ul.f-radios li span.f-key {
+  position: absolute;
+}
+
+/*footer*/
+.f-footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.f-footer .footer-inner-wrap {
+  text-align: right;
+  padding: 12px 20px 12px;
+}
+
+.f-progress {
+  font-weight: 300;
+}
+
+.f-progress,
+.f-nav {
+  display: inline-block;
+}
+
+.f-prev,
+.f-next,
+.f-progress {
+  margin: 0 .18em;
+  padding: .2em .2em;
+}
+
+.f-progress {
+  top: -1px;
+  position: relative;
+}
+
+a.f-disabled {
+  opacity: .4;
+  cursor: default;
+  pointer-events: none;
+}
+
+.f-prev svg,
+.f-next svg {
+  display: inline-block;
+  transition: fill 0.2s ease 0s;
+  width: 23px;
+  height: 13px;
+}
+
+.f-nav-text {
+  display: none;
+}
+
+/*progress-bar*/
+.f-progress-bar {
+  height: 1px;
+  position: static;
+  display: inline-block;
+  width: 64px;
+  vertical-align: middle;
+  margin: 0 6px 0 0;
+}
+
+.f-progress-bar-inner {
+  height: 1px;
+  transition: width .3s ease;
+}
+
+/**/
+.section-wrap {
+  margin-bottom: 30px;
+}
+
+.section-wrap > div {
+  margin-bottom: 20px;
+}
+
+.field-sectionbreaktype,
+.field-submittype {
+  max-width: 760px;
+}
+
+.f-submit {
+  margin-bottom: 20px;
+}
+
+/*
+  media-start
+*/
+
+@media only screen and (min-width: 1440px) {
+  .field-sectionbreaktype,
+  .field-submittype {
+    max-width: 920px;
+  }
+
+}
+
+@media only screen and (min-width: 1920px) {
+  .field-sectionbreaktype,
+  .field-submittype {
+    max-width: 1140px;
+  }
+
+}
+
+@media only screen and (max-width: 1023px) {
+  header {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .v-form {
+    margin-top: 16vh;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .v-form select {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .f-container{
+    padding: 0 6vw;
+  }
+
+  span.f-empty {
+    min-width: 5rem;
+    padding-right: 24px;
+  }
+  
+  p.description{
+    padding-right: 0;
+  }
+
+}
+
+@media screen and (max-width:479px) {
+  .v-form {
+    margin-top: 10vh;
+  }
+
+  .v-form input[type=text],
+  .v-form input[type=number],
+  .v-form input[type=tel],
+  .v-form input[type=email],
+  .v-form input[type=url],
+  .v-form input[type=password],
+  .v-form textarea {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    padding: 0.22rem 0.4rem;
+  }
+
+  .v-form select {
+    font-size: 1rem;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+  }
+
+  .v-form button {
+    min-height: 42px;
+  }
+
+  .f-arrow-down {
+    width: 12px;
+  }
+
+  span.f-tagline,
+  span.f-sub {
+    font-size: 1.1rem;
+  }
+
+  span.f-tagline {
+    line-height: 1.6;
+  }
+
+  ul.f-radios li,
+  ul.f-radios li input[type=text] {
+    font-size: .9rem;
+  }
+
+  .field-sectionbreaktype p {
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (max-height:420px) {
+  header {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+  }
+
+  .f-footer .footer-inner-wrap {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .v-form {
+      margin-top: 10vh;
+  }
+
+}
