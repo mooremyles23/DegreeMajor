@@ -88,16 +88,16 @@
         questions: [
           new QuestionModel({
             id: 'first_name',
-            tagline: "Hi! Welcome to our demo survey 😊",
-            title: 'What is your first name?',
+            tagline: "Hi! Welcome to our degree survey 😊",
+            title: 'What is your favorite subject?',
             type: QuestionType.Text,
             required: true,
             placeholder: 'Start typing here...'
           }),
           new QuestionModel({
             id: 'email',
-            tagline: "Nice to meet you 👀, let's continue",
-            title: "Provide an example email.",
+            tagline: "Good Choice 👀, let's continue",
+            title: "Provide yourfavorite hobby outside of school.",
             type: QuestionType.Email,
             required: true,
             placeholder: 'Start typing here...'
@@ -107,7 +107,7 @@
             title: 'Doing great! 👍 Go ahead and try with a phone number.',
             type: QuestionType.Phone,
             required: true,
-            mask: '(###) ###-####'
+           
           }),
           new QuestionModel({
             id: 'movies',
